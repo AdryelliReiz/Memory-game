@@ -1,0 +1,86 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    height: 100vh;
+    display: flex;
+    background: #1a1a1a;
+}
+
+main {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+#menu {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+h1 {
+    margin: 32px;
+    color: white;
+    font-size: 18;
+    font-family: sans-serif;
+    position: absolute;
+}
+
+#btn {
+    width: 180px;
+    height: 60px;
+    margin: auto;
+    font-size: 18px;
+    font-family: sans-serif;
+    color: white;
+    background-color: #9e0000;
+    border-radius: 12px;
+    border: 2px solid #ffffff;
+    transition: 0.3s;
+    cursor: pointer;
+}
+
+#btn:hover {
+    background-color: #b80000;
+    width: 168px;
+    height: 56px;
+}
+
+#cardboard {
+    width: 600px;
+    height: 600px;
+    margin: auto;
+    display: flex;
+    flex-wrap: wrap;
+}
+.memory-card {
+    width: calc(25% - 10px);
+    height: calc(25% - 10px);
+    margin: 5px;
+    transform-style: preserve-3d;
+    transition: 0.3s;
+    position: relative;
+    cursor: pointer;
+}
+
+.memory-card.flip {
+    transform: rotateY(180deg)
+}
+
+.memory-card:active {
+    transform: scale(0.97);
+}
+.front-face,
+.back-face {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+}
+
+.front-face {
+    transform: rotateY(180deg);
+}
+
